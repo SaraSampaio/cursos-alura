@@ -1,0 +1,27 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    function desenhaQuadradoColorido(corStyle, x, y, lado, corStroke) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = corStyle;
+        pincel.fillRect(x, y, lado, lado);
+        pincel.fillStroke = corStroke;
+        pincel.strokeRect(x, y, lado, lado);
+    }
+    
+    /*
+    var x = 0;
+
+    while(x < 600) {
+        desenhaQuadradoColorido('green', x, 0, 50, 'black');
+        x += 50;
+    }
+    */
+
+    for (var x = 0; x <= 600; x += 50){
+        desenhaQuadradoColorido('green', x, 0, 50, 'black');
+    }
+    
+</script>
